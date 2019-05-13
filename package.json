@@ -1,0 +1,22 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geminiyu233/graph.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geminiyu233/graph/issues"
+  },
+  "homepage": "https://github.com/geminiyu233/graph#readme",
+  "devDependencies": {
+    "webpack": "^4.31.0"
+  }
+}
