@@ -2,21 +2,32 @@
   "name": "graph",
   "version": "1.0.0",
   "description": "",
-  "main": "utils.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geminiyu233/graph.git"
+    "url": "git+https://github.com/chenli90s/graph.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/geminiyu233/graph/issues"
+    "url": "https://github.com/chenli90s/graph/issues"
   },
-  "homepage": "https://github.com/geminiyu233/graph#readme",
+  "homepage": "https://github.com/chenli90s/graph#readme",
   "devDependencies": {
-    "webpack": "^4.31.0"
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "d3": "^5.9.2",
+    "stats-js": "^1.0.1",
+    "three": "^0.104.0",
+    "three-orbitcontrols": "^2.102.1",
+    "tween": "^0.9.0"
   }
 }
