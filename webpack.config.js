@@ -6,7 +6,38 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[hash].js',
+        chunkFilename: '[name].[chunkhash:8].js',
         publicPath: '/'
+    },
+    // stats: { children: false },
+    devtool: 'source-map',
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loaders: 'babel-loader',
+                include: path.resolve(__dirname, 'src'),
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/, // 针对 .css 后缀的文件设置 loader
+                use: ['style-loader', 'css-loader'] // 使用 loader
+            },
+            {
+                test: /\.(eot|woff2?|ttf|svg)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            name: '[name]-[hash:5].min.[ext]',
+                            limit: 5000, // fonts file size <= 5KB, use 'base64'; else, output svg file
+                            publicPath: 'fonts/',
+                            outputPath: 'fonts/'
+                        }
+                    }
+                ]
+            }
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
