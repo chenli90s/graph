@@ -24,7 +24,7 @@ module.exports = {
                 use: ['style-loader', 'css-loader'] // 使用 loader
             },
             {
-                test: /\.(eot|woff2?|ttf|svg)$/,
+                test: /\.(eot|woff2?|ttf|svg|png)$/,
                 use: [
                     {
                         loader: 'url-loader',
